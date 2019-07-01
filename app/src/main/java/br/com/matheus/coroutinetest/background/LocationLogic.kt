@@ -27,7 +27,7 @@ class LocationLogic(val ctx: Context, val parada: Parada,val onFinish: () -> Uni
 
         //Location Request
         locationRequest = LocationRequest.create().apply {
-            interval = 5000
+            interval = 3000
             fastestInterval = 1000
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY
         }
@@ -73,7 +73,7 @@ class LocationLogic(val ctx: Context, val parada: Parada,val onFinish: () -> Uni
     private fun avisarParada(distancia: Float): Boolean{
         val vibrator = ctx.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
-        if (distancia <= 100f){
+        if (distancia <= 150f){
             Log.i("LocationLogic", "Distância < 900m")
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

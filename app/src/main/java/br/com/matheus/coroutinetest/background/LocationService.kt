@@ -42,8 +42,8 @@ class LocationService : IntentService("aa") {
         locationLogic.distanciaDoisPontos(this.mainLooper)
 
         while (run){
-            Log.i("LocationService", "LocationService running...")
-            Thread.sleep(1000)
+            /*Log.i("LocationService", "LocationService running...")
+            Thread.sleep(1000)*/
         }
 
         stopForeground(true)
